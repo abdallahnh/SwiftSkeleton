@@ -14,30 +14,24 @@
  * with varaition of animation and options.
  */
 
-import Foundation
 import UIKit
 
+/// A helper class to create skeleton animations.
 public class SkeletonAnimation {
-    /// Creates a customizable gradient animation.
+    /// Creates a standard pulsing gradient animation.
     /// - Parameters:
-    ///   - duration: The duration of one pulse of the animation. Defaults to 1 second.
+    ///   - duration: The duration of one pulse of the animation. Defaults to `1` second.
     ///   - firstColor: The starting color of the gradient.
     ///   - secondColor: The ending color of the gradient.
     /// - Returns: A `CABasicAnimation` configured for a skeleton effect.
-    public static func makeAnimation(
-        duration: CFTimeInterval = 1,
-        firstColor: UIColor,
-        secondColor: UIColor
-    ) -> CABasicAnimation {
+    public class func animation(duration: CFTimeInterval = 1, firstColor: UIColor = .gray, secondColor: UIColor = .white) -> CABasicAnimation {
         let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.backgroundColor))
         pulseAnimation.fromValue = firstColor.cgColor
         pulseAnimation.toValue = secondColor.cgColor
-
         pulseAnimation.duration = duration
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = .infinity
-        // Set to false to prevent removal on app backgrounding
         pulseAnimation.isRemovedOnCompletion = false
         return pulseAnimation
     }

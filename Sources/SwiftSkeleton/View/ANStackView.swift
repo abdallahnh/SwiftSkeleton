@@ -8,19 +8,24 @@
 
 import UIKit
 
+/// An internal helper class to simplify the creation of `UIStackView`.
 @MainActor
 class ANStackView {
+    /// The configuration style for the stack view.
     let style: Style
 
+    /// Creates a new stack view generator with a given style.
     init(style: Style) {
         self.style = style
     }
 
+    /// Defines the axis, distribution, alignment, and spacing of the stack view.
     enum Style {
         case h(distribution: UIStackView.Distribution, alignment: UIStackView.Alignment = .fill, spacing: CGFloat?)
         case v(distribution: UIStackView.Distribution, alignment: UIStackView.Alignment = .fill, spacing: CGFloat?)
     }
 
+    /// A lazily computed `UIStackView` instance based on the provided style.
     lazy var view: UIStackView = {
         let sv = UIStackView()
         switch self.style {

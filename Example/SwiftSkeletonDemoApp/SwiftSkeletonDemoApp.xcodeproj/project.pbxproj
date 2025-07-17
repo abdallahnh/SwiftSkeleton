@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A94FC0272E29220100A74144 /* SwiftSkeleton in Frameworks */ = {isa = PBXBuildFile; productRef = A94FC0262E29220100A74144 /* SwiftSkeleton */; };
+		A94FC0312E2941D100A74144 /* SwiftSkeleton in Frameworks */ = {isa = PBXBuildFile; productRef = A94FC0302E2941D100A74144 /* SwiftSkeleton */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94FC0272E29220100A74144 /* SwiftSkeleton in Frameworks */,
+				A94FC0312E2941D100A74144 /* SwiftSkeleton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = SwiftSkeletonDemoApp;
 			packageProductDependencies = (
-				A94FC0262E29220100A74144 /* SwiftSkeleton */,
+				A94FC0302E2941D100A74144 /* SwiftSkeleton */,
 			);
 			productName = SwiftSkeletonDemoApp;
 			productReference = A94FC00D2E291F3B00A74144 /* SwiftSkeletonDemoApp.app */;
@@ -114,7 +114,7 @@
 			mainGroup = A94FC0042E291F3B00A74144;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A94FC0252E29220100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */,
+				A94FC02F2E2941D100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A94FC00E2E291F3B00A74144 /* Products */;
@@ -348,20 +348,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A94FC0252E29220100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */ = {
+		A94FC02F2E2941D100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/abdallahnh/SwiftSkeleton";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = develop;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A94FC0262E29220100A74144 /* SwiftSkeleton */ = {
+		A94FC0302E2941D100A74144 /* SwiftSkeleton */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A94FC0252E29220100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */;
+			package = A94FC02F2E2941D100A74144 /* XCRemoteSwiftPackageReference "SwiftSkeleton" */;
 			productName = SwiftSkeleton;
 		};
 /* End XCSwiftPackageProductDependency section */

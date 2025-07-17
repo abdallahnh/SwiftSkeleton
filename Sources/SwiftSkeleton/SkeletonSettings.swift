@@ -7,25 +7,31 @@
 
 import UIKit
 
-// Change from 'class' to 'struct'
-public struct SkeletonSettings {
-    /// Skeleton first color.
-    public let firstColor: UIColor
-    /// Skeleton second color.
-    public let secondColor: UIColor
-    /// The corner radius for the animation. Defaults to 5.
-    public let cornerRadius: CGFloat? // Fixed typo: cornorRaduis -> cornerRadius
+/// A class to configure the default appearance of all skeleton views.
+public class SkeletonSettings {
+    /// The primary color of the skeleton gradient.
+    public var firstColor: UIColor
+    /// The secondary color of the skeleton gradient.
+    public var secondColor: UIColor
+    /// The default corner radius for skeleton layers.
+    public var cornerRadius: CGFloat?
+    /// The default animation style.
+    public var animation: CABasicAnimation
 
-    /// The default settings for the skeleton animation.
-    @MainActor public static let `default` = SkeletonSettings()
+    /// A shared singleton instance for global configuration.
+    /// It is recommended to configure this once at app launch for consistent appearance.
+    nonisolated(unsafe) public static let `default`: SkeletonSettings = SkeletonSettings(firstColor: .lightGray, secondColor: .gray, animation: CABasicAnimation())
 
-    public init(
-        firstColor: UIColor = .lightGray,
-        secondColor: UIColor = .gray,
-        cornerRadius: CGFloat? = 5
-    ) {
+    /// Creates a new settings configuration.
+    /// - Parameters:
+    ///   - firstColor: The primary color of the skeleton gradient.
+    ///   - secondColor: The secondary color of the skeleton gradient.
+    ///   - cornerRadius: The default corner radius for skeleton layers.
+    ///   - animation: The default animation style.
+    public init(firstColor: UIColor, secondColor: UIColor, cornerRadius: CGFloat? = 5, animation: CABasicAnimation) {
         self.firstColor = firstColor
         self.secondColor = secondColor
         self.cornerRadius = cornerRadius
+        self.animation = animation
     }
 }
