@@ -17,7 +17,7 @@ public struct SkeletonSettings {
     public var cornerRadius: CGFloat? // Fixed typo: cornorRaduis -> cornerRadius
 
     /// The default settings for the skeleton animation.
-    @MainActor public static let `default` = SkeletonSettings()
+    @MainActor public static var `default` = SkeletonSettings()
 
     public init(
         firstColor: UIColor = .lightGray,
