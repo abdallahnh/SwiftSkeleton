@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/abdallahnh/SwiftSkeleton",
       "state" : {
-        "revision" : "32b3b05a9522107e5e4464d20209c6d7a6b791f3",
-        "version" : "1.0.2"
+        "branch" : "master",
+        "revision" : "e69004362b492eed643aafe1bb97d38d2cfd22f2"
       }
     }
   ],

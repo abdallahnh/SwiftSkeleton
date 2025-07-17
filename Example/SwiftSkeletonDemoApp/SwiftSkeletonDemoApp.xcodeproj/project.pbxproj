@@ -352,7 +352,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/abdallahnh/SwiftSkeleton";
 			requirement = {
-				branch = develop;
+				branch = master;
 				kind = branch;
 			};
 		};
