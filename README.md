@@ -22,7 +22,7 @@ SwiftSkeleton is a simple, lightweight, and customizable library to add skeleton
 You can add SwiftSkeleton to your project using Swift Package Manager.
 
 1.  In Xcode, open your project and navigate to **File > Add Packages...**
-2.  Enter the repository URL: `https://github.com/your-username/SwiftSkeleton.git` (replace with your actual URL).
+2.  Enter the repository URL: `https://github.com/abdallahnh/SwiftSkeleton.git` (replace with your actual URL).
 3.  Select the `SwiftSkeleton` product and add it to your app target.
 
 ***
