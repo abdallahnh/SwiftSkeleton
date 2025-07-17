@@ -10,11 +10,11 @@ import UIKit
 // Change from 'class' to 'struct'
 public struct SkeletonSettings {
     /// Skeleton first color.
-    public let firstColor: UIColor
+    public var firstColor: UIColor
     /// Skeleton second color.
-    public let secondColor: UIColor
+    public var secondColor: UIColor
     /// The corner radius for the animation. Defaults to 5.
-    public let cornerRadius: CGFloat? // Fixed typo: cornorRaduis -> cornerRadius
+    public var cornerRadius: CGFloat? // Fixed typo: cornorRaduis -> cornerRadius
 
     /// The default settings for the skeleton animation.
     @MainActor public static let `default` = SkeletonSettings()
