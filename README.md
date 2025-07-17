@@ -43,20 +43,21 @@ myLabel.isSkeleton = true
 // Hide skeleton
 myImageView.isSkeleton = false
 Advanced Customization
-
+```
 For more control, use the skeletonWith() method, which allows you to customize the appearance for a specific view.
 
-Swift
+```swift
 // Show a 3-line skeleton on a UILabel
 descriptionLabel.skeletonWith(numberOfLines: 3)
 
 // Apply a skeleton with a custom corner radius and animation
 myView.skeletonWith(cornerRadius: 12, animation: customAnimation)
+```
 Global Settings
 
 You can change the default colors and edge padding for all skeleton views by updating the SkeletonSettings.default and SkeletonConstraint.edgeInsets objects, typically in your AppDelegate.
 
-Swift
+```swift
 // In AppDelegate.swift
 import SwiftSkeleton
 
@@ -71,24 +72,4 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
     return true
 }
-
-#### Sources/SwiftSkeleton/SkeletonSettings.swift
-
-```swift
-import UIKit
-
-public class SkeletonSettings {
-    public var firstColor: UIColor
-    public var secondColor: UIColor
-    public var cornerRadius: CGFloat?
-    public var animation: CABasicAnimation
-
-    nonisolated(unsafe) public static let `default`: SkeletonSettings = SkeletonSettings(firstColor: .lightGray, secondColor: .gray, animation: CABasicAnimation())
-
-    public init(firstColor: UIColor, secondColor: UIColor, cornerRadius: CGFloat? = 5, animation: CABasicAnimation) {
-        self.firstColor = firstColor
-        self.secondColor = secondColor
-        self.cornerRadius = cornerRadius
-        self.animation = animation
-    }
-}
+```
